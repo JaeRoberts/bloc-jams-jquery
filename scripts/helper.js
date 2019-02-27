@@ -11,5 +11,4 @@ playPauseAndUpdate(song) => {
 
   });
 }
-
 const helper = new Helper();
