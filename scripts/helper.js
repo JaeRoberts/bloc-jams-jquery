@@ -1,5 +1,5 @@
 class Helper {
-playPauseAndUpdate(song) {
+playPauseAndUpdate(song){
 
   player.playPause(song);
 
