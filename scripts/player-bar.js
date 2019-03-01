@@ -36,16 +36,18 @@
     helper.playPauseAndUpdate(previousSong);
   });
 
-  $('#volume-control input').on('input', function (event){
+  $('#volume-control input').on('input', function(event) {
     player.setVolume(event.target.value);
   })
 
-  $('#time-control input').on('input', function (event) {
+  $('#time-control input').on('input', function(event) {
     player.skipTo(event.target.value);
   });
 
-  setInterval( () => {
-    if(player.playState !== 'playing') {return;}
+  setInterval(() => {
+    if (player.playState !== 'playing') {
+      return;
+    }
     const currentTime = player.getTime();
     const duration = player.getDuration();
     const percent = (currentTime / duration) * 100;
